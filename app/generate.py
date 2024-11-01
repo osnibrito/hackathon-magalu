@@ -73,7 +73,7 @@ resource "mgc_virtual_machine_instances" "{name}" {{
     connection {{
         type        = "ssh"
         user        = "debian"
-        private_key = file("~/.ssh/id_rsa")
+        agent       = true
         host        = self.network.public_address
     }}
 }}
