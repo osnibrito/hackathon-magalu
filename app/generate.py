@@ -64,7 +64,7 @@ resource "mgc_virtual_machine_instances" "{name}" {{
             "sudo apt-get upgrade -y",
             "wget https://download.oracle.com/java/22/archive/jdk-22.0.2_linux-x64_bin.deb",
             "sudo apt install iputils-ping net-tools mailutils coreutils dnsutils sendmail screen grep nano wget less cron man sed pv -y",
-            "sudo dpkg -i jdk-22.0.2_linux-x64_bin",
+            "sudo dpkg -i jdk*",
             "wget -O setup.sh https://raw.githubusercontent.com/simylein/minecraft-server/main/setup.sh && chmod +x setup.sh",
             "./setup.sh --name minecraft --proceed true --version 1.21 --port 25565 --eula true --remove true --start true"
         ]
